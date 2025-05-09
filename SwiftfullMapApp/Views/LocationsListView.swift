@@ -13,7 +13,7 @@ struct LocationsListView: View {
         List{
             ForEach(vm.locations) { location in
                 Button {
-                    
+                    vm.showNextLocation(location: location)
                 } label: {
                     lisRowView(location: location)
                        
@@ -55,7 +55,5 @@ extension LocationsListView {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
-    func showNextLocation(location: Location){
-        
-    }
+    
 }
