@@ -8,10 +8,16 @@
 import SwiftUI
 
 @main
+
+
+
+
 struct SwiftfullMapAppApp: App {
+    @StateObject var vm = LocationsViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(LocationsViewModel())
         }
     }
 }
